@@ -31,8 +31,10 @@ gem 'spring',        group: :development
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'actionpack-page_caching'
 
-# Use Capistrano for deployment
+
+# Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
