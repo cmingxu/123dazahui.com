@@ -9,10 +9,10 @@ case "$1" in
   $UNICORN -c $CONFIG_FILE -E production -D
   ;;
   stop)
-  kill -QUIT `cat /tmp/unicorn`
+  kill -QUIT `cat /tmp/unicorn.pid`
   ;;
   restart|force-reload)
-    kill -USR2 `cat /tmp/unicorn`
+    kill -USR2 `cat /tmp/unicorn.pid`
   ;;
   *)
    echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload}" >&2
