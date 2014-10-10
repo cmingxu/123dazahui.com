@@ -33,6 +33,12 @@ gem 'spring',        group: :development
 gem 'unicorn'
 gem 'actionpack-page_caching'
 
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+
+
+gem "haml-rails"
+
 
 gem 'capistrano-rails', group: :development
 gem 'capistrano-bundler'

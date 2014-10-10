@@ -23,5 +23,6 @@ module Dazahui
     #
     #
     config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public"
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end
