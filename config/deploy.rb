@@ -42,14 +42,19 @@ namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command do
-      run "/etc/init.d/unicorn_#{application} #{command}"
+      on roles(:all) do |host|
+        execute "/etc/init.d/unicorn_dazahui #{command}"
+      end
     end
   end
 
   task :setup_config do
-    sudo "ln -nfs #{current_path}/config/123dazahui.com.conf /etc/nginx/sites-enabled/#{application}"
-    sudo "ln -nfs #{current_path}/config/dazahui.sh /etc/init.d/unicorn_#{application}"
+
+    on roles(:all) do |host|
+      sudo "ln -nfs #{current_path}/config/123dazahui.com.conf /etc/nginx/sites-enabled/dazahui"
+      sudo "ln -nfs #{current_path}/config/dazahui.sh /etc/init.d/unicorn_dazahui"
+    end
   end
-  #after "deploy:finalize_update", "deploy:setup_config"
-  
+  after "deploy:updated", "deploy:setup_config"
+
 end
