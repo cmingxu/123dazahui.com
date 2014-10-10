@@ -61,7 +61,7 @@ namespace :deploy do
       "chmod a+x #{current_path}/config/dazahui.sh"
     end
   end
-  after "deploy:updated", "deploy:change_dazahui_permission"
+  after "deploy:setup_config", "deploy:change_dazahui_permission"
 
 end
 
