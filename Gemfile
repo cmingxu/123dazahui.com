@@ -34,8 +34,9 @@ gem 'unicorn'
 gem 'actionpack-page_caching'
 
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
+gem 'capistrano-bundler'
+gem 'capistrano-rvm'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
