@@ -1,10 +1,20 @@
-.row
+.row.main_page
   .col-lg-8
-    .panel.panel-success
-      .panel-heading
-        新闻
-      .panel-body
-        weee
+    - News::SOURCES.each do |source|
+      .panel.panel-success
+        .panel-heading
+          = source[1]
+        .panel-body
+          %table.table.table-condensed
+            - @news[source[1]][0..10].each do |n|
+              %tr
+                %td
+                  .title
+                    = link_to n.title, n.link, :target => "_blank"
+                  .desc
+                    = raw n.description
+
+
   .col-lg-4
     .panel.panel-primary
       .panel-heading
