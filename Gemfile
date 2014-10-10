@@ -44,6 +44,9 @@ gem 'capistrano-rails', group: :development
 gem 'capistrano-bundler'
 gem 'capistrano-rvm'
 
+gem 'httparty'
+gem 'whenever'
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 

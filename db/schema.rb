@@ -11,6 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141010143216) do
+
+  create_table "news", force: true do |t|
+    t.string   "title"
+    t.string   "source"
+    t.text     "description"
+    t.string   "cate"
+    t.string   "subcate"
+    t.string   "md5"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
