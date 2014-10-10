@@ -23,7 +23,7 @@ set :deploy_to, '/home/ubuntu/codes'
 # set :pty, true
 
 # Default value for :linked_files is []
-# set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
@@ -47,7 +47,9 @@ namespace :deploy do
   end
 
   task :setup_config do
-    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
+    sudo "ln -nfs #{current_path}/config/123dazahui.com.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/dazahui.sh /etc/init.d/unicorn_#{application}"
   end
+  #after "deploy:finalize_update", "deploy:setup_config"
+  
 end

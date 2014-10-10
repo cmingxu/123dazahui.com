@@ -26,8 +26,8 @@ server '54.64.246.160', user: 'ubuntu', roles: %w{web app}, my_property: :my_val
 # Global options
 # --------------
 set :ssh_options, {
-  keys: %w(/home/ubuntu/.ssh/keypair.pem),
-  forward_agent: false
+  keys: %w(/Users/xcm/.ssh/keypair.pem),
+  forward_agent: true
 }
 #
 # And/or per server (overrides global)
