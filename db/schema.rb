@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010143216) do
+ActiveRecord::Schema.define(version: 20141011030419) do
 
   create_table "news", force: true do |t|
     t.string   "title"
@@ -21,6 +21,32 @@ ActiveRecord::Schema.define(version: 20141010143216) do
     t.string   "subcate"
     t.string   "md5"
     t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stars", force: true do |t|
+    t.string   "name"
+    t.string   "gender"
+    t.string   "country"
+    t.date     "dob"
+    t.string   "constellation"
+    t.string   "career"
+    t.string   "height"
+    t.string   "rate"
+    t.string   "blood"
+    t.string   "home_town"
+    t.string   "school"
+    t.string   "company"
+    t.string   "weight"
+    t.string   "religon"
+    t.string   "hobby"
+    t.text     "desc"
+    t.text     "desc_short"
+    t.text     "achievement"
+    t.text     "event"
+    t.string   "source"
+    t.string   "avatar"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

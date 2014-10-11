@@ -1,0 +1,70 @@
+= form_for @star do |f|
+  - if @star.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@star.errors.count, "error")} prohibited this star from being saved:"
+      %ul
+        - @star.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :gender
+    = f.text_field :gender
+  .field
+    = f.label :country
+    = f.text_field :country
+  .field
+    = f.label :dob
+    = f.date_select :dob
+  .field
+    = f.label :constellation
+    = f.text_field :constellation
+  .field
+    = f.label :career
+    = f.text_field :career
+  .field
+    = f.label :height
+    = f.text_field :height
+  .field
+    = f.label :rate
+    = f.text_field :rate
+  .field
+    = f.label :blood
+    = f.text_field :blood
+  .field
+    = f.label :home_town
+    = f.text_field :home_town
+  .field
+    = f.label :school
+    = f.text_field :school
+  .field
+    = f.label :company
+    = f.text_field :company
+  .field
+    = f.label :weight
+    = f.text_field :weight
+  .field
+    = f.label :religon
+    = f.text_field :religon
+  .field
+    = f.label :hobby
+    = f.text_field :hobby
+  .field
+    = f.label :desc
+    = f.text_area :desc
+  .field
+    = f.label :desc_short
+    = f.text_area :desc_short
+  .field
+    = f.label :achievement
+    = f.text_area :achievement
+  .field
+    = f.label :event
+    = f.text_area :event
+  .field
+    = f.label :source
+    = f.text_field :source
+  .actions
+    = f.submit 'Save'

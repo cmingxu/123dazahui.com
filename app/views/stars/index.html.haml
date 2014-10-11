@@ -1,0 +1,57 @@
+%h1 Listing stars
+
+%table
+  %tr
+    %th Name
+    %th Gender
+    %th Country
+    %th Dob
+    %th Constellation
+    %th Career
+    %th Height
+    %th Rate
+    %th Blood
+    %th Home town
+    %th School
+    %th Company
+    %th Weight
+    %th Religon
+    %th Hobby
+    %th Desc
+    %th Desc short
+    %th Achievement
+    %th Event
+    %th Source
+    %th
+    %th
+    %th
+
+  - @stars.each do |star|
+    %tr
+      %td= star.name
+      %td= star.gender
+      %td= star.country
+      %td= star.dob
+      %td= star.constellation
+      %td= star.career
+      %td= star.height
+      %td= star.rate
+      %td= star.blood
+      %td= star.home_town
+      %td= star.school
+      %td= star.company
+      %td= star.weight
+      %td= star.religon
+      %td= star.hobby
+      %td= star.desc
+      %td= star.desc_short
+      %td= star.achievement
+      %td= star.event
+      %td= star.source
+      %td= link_to 'Show', star
+      %td= link_to 'Edit', edit_star_path(star)
+      %td= link_to 'Destroy', star, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Star', new_star_path

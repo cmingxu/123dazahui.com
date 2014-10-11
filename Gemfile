@@ -47,6 +47,7 @@ gem 'capistrano-rvm'
 
 gem 'httparty'
 gem 'whenever'
+gem 'nokogiri'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

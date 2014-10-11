@@ -48,6 +48,14 @@ namespace :deploy do
     end
   end
 
+  task :change_dazahui_permission do
+    on roles(:all) do |host|
+      execute "chmod a+x #{current_path}/config/dazahui.sh"
+    end
+  end
+  after "deploy:updated", "deploy:change_dazahui_permission"
+
+
   task :setup_config do
     on roles(:all) do |host|
       sudo "ln -nfs #{current_path}/config/123dazahui.com.conf /etc/nginx/sites-enabled/dazahui"
@@ -55,13 +63,6 @@ namespace :deploy do
     end
   end
   after "deploy:updated", "deploy:setup_config"
-
-  task :change_dazahui_permission do
-    on roles(:all) do |host|
-      "chmod a+x #{current_path}/config/dazahui.sh"
-    end
-  end
-  after "deploy:setup_config", "deploy:change_dazahui_permission"
 
 end
 
