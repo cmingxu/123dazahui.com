@@ -1,4 +1,4 @@
-.row
+.row.star
   .panel
     .panel-heading.panel-warning
       - if params[:search]
@@ -20,7 +20,7 @@
           %td
             地区：
 
-.row
+.row.star
   .panel
     .panel-heading.panel-warning
       明星
@@ -30,7 +30,7 @@
           %tr
             - stars.each do |star|
               %td
-                = image_tag star.avatar
+                = image_tag star.avatar, :class => "pull-left star-img"
 
                 %ul.list-group.pull-left
                   - Star::COLUMN_HANS_MAP.keys[0..6].each do |k|
