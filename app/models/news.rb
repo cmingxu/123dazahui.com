@@ -2,7 +2,7 @@ class News < ActiveRecord::Base
   after_save :expire_page_cache
 
   def expire_page_cache
-    FileUtils.rm_rf Rails.root.to_s + "/public/"
+    #FileUtils.rm_rf Rails.root.to_s + "/public/"
   end
 
   SOURCES = [
