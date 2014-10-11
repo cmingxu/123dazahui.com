@@ -2,6 +2,8 @@ class CreateStars < ActiveRecord::Migration
   def change
     create_table :stars do |t|
       t.string :name
+      t.string :en_name
+      t.string :old_name
       t.string :gender
       t.string :country
       t.date :dob
@@ -15,7 +17,7 @@ class CreateStars < ActiveRecord::Migration
       t.string :company
       t.string :weight
       t.string :religon
-      t.string :hobby
+      t.text :hobby
       t.text :desc
       t.text :desc_short
       t.text :achievement

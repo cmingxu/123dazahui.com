@@ -48,6 +48,9 @@ gem 'capistrano-rvm'
 gem 'httparty'
 gem 'whenever'
 gem 'nokogiri'
+gem 'annotate', '~> 2.6.5'
+gem 'kaminari'
+
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

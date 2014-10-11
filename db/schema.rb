@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20141011030419) do
 
   create_table "stars", force: true do |t|
     t.string   "name"
+    t.string   "en_name"
+    t.string   "old_name"
     t.string   "gender"
     t.string   "country"
     t.date     "dob"

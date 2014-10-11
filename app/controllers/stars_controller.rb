@@ -4,7 +4,7 @@ class StarsController < ApplicationController
   # GET /stars
   # GET /stars.json
   def index
-    @stars = Star.all
+    @stars = Star.page(params[:page]).per(30)
   end
 
   # GET /stars/1
