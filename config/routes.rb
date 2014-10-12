@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :news
 
   get 'welcome/index'
+  get 'more_news' => "welcome#more_news"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

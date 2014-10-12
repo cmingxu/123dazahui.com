@@ -30,7 +30,7 @@
           %tr
             - stars.each do |star|
               %td
-                = image_tag star.avatar, :class => "pull-left star-img"
+                = image_tag star.avatar, :class => "pull-left star-img", :height => "277", :width => "210"
 
                 %ul.list-group.pull-left
                   - Star::COLUMN_HANS_MAP.keys[0..6].each do |k|

@@ -3,18 +3,17 @@
     - News::SOURCES.each do |source|
       .panel.panel-success
         .panel-heading
-          = source[1]
-          .pull-right
-            = link_to ">> 更多", more_news_path(:subcate => source[1])
+          = params[:subcate]
         .panel-body
           %table.table.table-condensed
-            - @news[source[1]][0..10].each do |n|
+            - @news.each do |n|
               %tr
                 %td
                   .title
                     = link_to n.title, n.link, :target => "_blank"
                   .desc
                     = raw n.description
+          = paginate @news
 
 
   .col-lg-4
