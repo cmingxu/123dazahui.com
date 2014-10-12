@@ -53,7 +53,7 @@ namespace :deploy do
       execute "chmod a+x #{current_path}/config/dazahui.sh"
     end
   end
-  after "deploy:updated", "deploy:change_dazahui_permission"
+  after "deploy:published", "deploy:change_dazahui_permission"
 
 
   task :setup_config do
@@ -62,7 +62,7 @@ namespace :deploy do
       sudo "ln -nfs #{current_path}/config/dazahui.sh /etc/init.d/unicorn_dazahui"
     end
   end
-  after "deploy:updated", "deploy:setup_config"
+  after "deploy:published", "deploy:setup_config"
 
 end
 
