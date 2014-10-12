@@ -1,0 +1,27 @@
+.container-fluid.color-bar
+  .row-fluid
+    .col-lg-4{:style => 'background-color: red;'} &nbsp;
+    .col-lg-4{:style => 'background-color: green;'} &nbsp;
+    .col-lg-4{:style => 'background-color: blue;'} &nbsp;
+.navbar{:role => 'navigation'}
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{'data-toggle' => 'collapse', 'data-target' => '.navbar-collapse', 'type' => 'button'}
+        %span.sr-only   Toggle Navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => '/'} 123大杂烩
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.pull-right
+        %li.active
+          %a{:href => "/"} 新闻
+
+        %li
+          %a{:href => "#"} 笑话/段子
+        %li
+          %a{:href => "#"} 正能量
+        %li
+          %a{:href => "/stars"} 星资料
+
+

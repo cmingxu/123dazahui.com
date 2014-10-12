@@ -12,7 +12,7 @@ class WelcomeController < ApplicationController
   ABOUT_PAGES.keys.each do |page|
     define_method page do
       @page = Page.find_by_slug(page)
-      render "about"
+      render "about", :layout => "about"
     end
   end
 end
