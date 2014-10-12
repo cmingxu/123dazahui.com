@@ -1,16 +1,32 @@
-$body-bg:               #e2e2e2 !default
+$body-bg:               #f1f4f9 !default
 $font-family-base: "Heiti SC Light","Helvetica Neue",Helvetica,Arial,sans-serif
 $border-radius-base:        0px !default
 
+$text-color: #414a51
+$link-color: darken($text-color, 5%)
+//$link-hover-color:      darken($link-color, 30%) !default
+
 
 .navbar
-  background-color: darken($body-bg, 20%)
+  background-color: #0099cc
+  height: 120px
+
+  .nav
+    li
+      a
+        font-size: 20px
+        color: white
+      a:hover
+        color: darken(white, 30%) 
+        background-color: inherit!important
 
 .navbar-header
   .navbar-brand
-    font-size: 24px 
-  .navbar-nav
-    font-size: 18px 
+    font-size: 32px 
+    font-weight: bold
+    font-style: italic
+  a
+    color: white
 
 
 .color-bar
@@ -43,5 +59,7 @@ $border-radius-base:        0px !default
 
 
 footer
-  background-color: #afafaf
+  background-color: #30abd5
+  padding-top: 40px
+  padding-bottom: 40px
 
