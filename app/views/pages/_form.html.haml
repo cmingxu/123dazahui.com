@@ -1,0 +1,28 @@
+= form_for @page, :html => { :multipart => true } do |f|
+  - if @page.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@page.errors.count, "error")} prohibited this page from being saved:"
+      %ul
+        - @page.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_area :title
+  .field
+    = f.label :content
+    = f.kindeditor :content, :width => 800, :height => 300, :window_onload => true
+  .field
+    = f.label :desc
+    = f.text_area :desc
+  .field
+    = f.label :slug
+    = f.text_field :slug
+  .field
+    = f.label :published_at
+    = f.date_select :published_at
+  .field
+    = f.label :source
+    = f.text_field :source
+  .actions
+    = f.submit 'Save'

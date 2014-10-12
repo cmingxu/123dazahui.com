@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @page.title
+%p
+  %b Content:
+  = raw @page.content
+%p
+  %b Desc:
+  = @page.desc
+%p
+  %b Slug:
+  = @page.slug
+%p
+  %b Published at:
+  = @page.published_at
+%p
+  %b Source:
+  = @page.source
+
+= link_to 'Edit', edit_page_path(@page)
+\|
+= link_to 'Back', pages_path

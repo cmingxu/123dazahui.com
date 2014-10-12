@@ -41,7 +41,15 @@
     .container
       = yield
       %footer
-        &copy; 123dazahui.com
+        .center-block
+          %ul.list-inline
+            - ABOUT_PAGES.keys.each do |link|
+              %li
+                =link_to ABOUT_PAGES[link], send("#{link}_path")
+          
+        .center-block
+          &copy; 123dazahui.com
+
 
 
     = javascript_include_tag "application", "data-turbolinks-track" => true

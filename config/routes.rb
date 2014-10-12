@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+  resources :pages
+
   resources :stars
 
   resources :news
 
   get 'welcome/index'
   get 'more_news' => "welcome#more_news"
+
+  %w(about team company jobs).each do |page|
+    get page => "welcome##{page}"
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
