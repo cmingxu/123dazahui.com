@@ -1,0 +1,24 @@
+.row.main_page
+  .col-lg-8
+    .panel.panel-primary
+      .panel-heading
+        娱乐头条
+      .panel-body
+        %table.table.table-condensed
+          - @ents.each do |n|
+            %tr
+              %td
+                .title
+                  = link_to n.title, n.link, :target => "_blank"
+                .desc
+                  = raw n.desc.gsub(/<img.*\/>/, "")
+
+
+
+  .col-lg-4
+    .panel.panel-primary
+      .panel-heading
+        笑话一则
+      .panel-body
+        老师：知道那个汉字最有毅力吗？学生：田。老师：怎么说？学生：挡着左边右边日，挡着右边左边日，挡着上边下边日，挡着下边上边日，抽掉一横躺着日，抽掉一竖站着日。老师：……
+        

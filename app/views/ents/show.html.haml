@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @ent.title
+%p
+  %b Desc:
+  = @ent.desc
+%p
+  %b Link:
+  = @ent.link
+%p
+  %b Author:
+  = @ent.author
+%p
+  %b Pub:
+  = @ent.pub
+
+= link_to 'Edit', edit_ent_path(@ent)
+\|
+= link_to 'Back', ents_path
