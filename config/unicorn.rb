@@ -10,7 +10,7 @@ old_pid = pid_file + '.oldbin'
 # 通道
 socket_file = '/tmp/unicorn.sock'
  
-worker_processes 6
+worker_processes 2
 working_directory root_path
 timeout 30
 # 侦听
