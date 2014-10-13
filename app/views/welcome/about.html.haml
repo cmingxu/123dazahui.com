@@ -1,4 +1,4 @@
-.row
+.row.about
   .col-lg-2
     %ul.list-group
       -  ABOUT_PAGES.keys.each do |about|
@@ -6,4 +6,5 @@
           = link_to ABOUT_PAGES[about], send("#{about}_path")
 
   .col-lg-10
-    = raw @page.content
+    .well
+      = raw @page.content
